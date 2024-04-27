@@ -1,0 +1,327 @@
+.body {
+  align-items: center;
+  background: #ffffff;
+  display: flex;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.form {
+  --border: rgba(0, 0, 0, 0.125);
+  --borderDark: rgba(0, 0, 0, 0.25);
+  --borderDarker: rgba(0, 0, 0, 0.5);
+  --bgColorH: 0;
+  --bgColorS: 0%;
+  --bgColorL: 98%;
+  --fgColorH: 210;
+  --fgColorS: 50%;
+  --fgColorL: 38%;
+  border: 1px solid var(--border);
+  border-radius: 0.125rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  background: #f6f6f6;
+}
+
+.form input {
+  border: 1px solid var(--border);
+  border-radius: 0.125rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  height: 2.25rem;
+  line-height: 1.25rem;
+  margin-top: 0.25rem;
+  order: 2;
+  padding: 0.25rem 0.5rem;
+  width: 15rem;
+  transition: all 0.25s;
+  width: 260px;
+}
+
+.form input::placeholder {
+  color: var(--borderDark);
+}
+
+.form > div {
+  order: 2;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .label-show-password {
+  order: 3;
+}
+
+.form label > span {
+  color: var(--borderDarker);
+  display: block;
+  font-size: 0.825rem;
+  margin-top: 0.625rem;
+  order: 1;
+}
+
+.form label > span.required::after {
+  content: "*";
+  color: #ff0000;
+  margin-left: 0.125rem;
+}
+
+.form label input {
+  order: 2;
+  outline: none;
+}
+
+.form input[type="checkbox"] + div label:hover span::before,
+.form label:hover input.text {
+  border-color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+}
+
+.form label input.text:focus,
+.form label input.text:active {
+  border-color: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+  box-shadow: 0 1px hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+}
+
+.form input[type="submit"] {
+  color: hsl(var(--bgColorH), var(--bgColorS), var(--bgColorL));
+  background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-top: 0.625rem;
+  order: 4;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+.form input[type="submit"]:hover {
+  background: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
+  transition: background 0.25s;
+  cursor: pointer;
+}
+
+
+/** Checkbox styling */
+.a11y-hidden {
+  position: absolute;
+  top: -1000em;
+  left: -1000em;
+}
+
+.form input[type="checkbox"] + label span {
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.form input[type="checkbox"] + label span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 1px solid var(--borderDark);
+  border-radius: 0.125rem;
+  transition: all 0.25s;
+}
+
+.form input[type="checkbox"]:checked + label span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.1875rem;
+  left: 0.1875rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border: 1px solid var(--borderDark);
+  border-radius: 0.125rem;
+  transition: all 0.25s;
+  background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+}
+
+/** PERSON */
+.form figure {
+  --skinH: 30;
+  --skinS: 100%;
+  --skinL: 87%;
+  --hair: rgb(180,70,60);
+  background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), 95%);
+  border: 1px solid rgba(0,0,0,0.0625);
+  border-radius: 50%;
+  height: 0;
+  margin: auto auto;
+  margin-bottom: 2rem;
+  order: 1;
+  padding-top: 60%;
+  position: relative;
+  width: 60%;
+  overflow: hidden;
+}
+
+.form figure div {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.form figure .skin {
+  background: hsl(var(--skinH), var(--skinS), var(--skinL));
+  box-shadow: inset 0 0 3rem hsl(var(--skinH), var(--skinS), calc(var(--skinL) * 0.95));
+}
+
+.form figure .head {
+  top: 40%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  border-radius: 100%;
+  box-shadow: 0 -0.175rem 0 0.125rem var(--hair);
+}
+
+.form figure .ears {
+  top: 47%;
+  left: 50%;
+  white-space: nowrap;
+}
+
+.form figure .ears::before,
+.form figure .ears::after {
+  content: "";
+  background: hsl(var(--skinH), var(--skinS), var(--skinL));
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  margin: 0 2.1rem;
+}
+
+.form figure .head .eyes {
+  top: 55%;
+  left: 50%;
+  white-space: nowrap;
+}
+
+@-webkit-keyframes blink {
+  0%, 90%, 100% {
+    height: 10px;
+  }
+  95% {
+    height: 0;
+  }
+}
+
+@keyframes blink {
+  0%, 90%, 100% {
+    height: 10px;
+  }
+  95% {
+    height: 0px;
+  }
+}
+
+.form figure .head .eyes::before,
+.form figure .head .eyes::after {
+  content: "";
+  background: var(--borderDarker);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin: 0 0.5rem;
+  -webkit-animation: blink 5s infinite;
+  animation: blink 5s infinite;
+  transition: all 0.15s;
+}
+
+.form input[name="show-password"]:checked ~ figure .head .eyes::before,
+.form input[name="show-password"]:checked ~ figure .head .eyes::after {
+  height: 0.125rem;
+  animation: none;
+}
+
+.form figure .head .mouth {
+  border: 0.125rem solid transparent;
+  border-bottom: 0.125rem solid var(--borderDarker);
+  width: 25%;
+  border-radius: 50%;
+  transition: all 0.5s
+}
+
+.form:invalid figure .head .mouth {
+  top: 75%;
+  left: 50%;
+  height: 10%;
+}
+
+.form:valid figure .head .mouth {
+  top: 60%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+}
+
+.form figure .hair {
+  top: 40%;
+  left: 50%;
+  width: 66.66%;
+  height: 66.66%;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.form figure .hair::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--hair);
+  border-radius: 50%;
+  top: -60%;
+  left: -50%;
+  box-shadow: 4rem 0 var(--hair);
+}
+
+.form figure .neck {
+  width: 10%;
+  height: 40%;
+  top: 62%;
+  left: 50%;
+  background: hsl(var(--skinH), var(--skinS), calc(var(--skinL) * 0.94));
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 0.25rem var(--border);
+}
+
+.form figure .person-body {
+  width: 60%;
+  height: 100%;
+  border-radius: 50%;
+  background: red;
+  left: 50%;
+  top: 126%;
+  background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+}
+
+.form figure .shirt-1,
+.form figure .shirt-2 {
+  width: 12%;
+  height: 7%;
+  background: hsl(var(--bgColorH), var(--bgColorS), var(--bgColorL));
+  top: 76%;
+  left: 36.5%;
+  transform: skew(-10deg) rotate(15deg)
+}
+
+.form figure .shirt-2 {
+  left: 52.5%;
+  transform: skew(10deg) rotate(-15deg)
+}

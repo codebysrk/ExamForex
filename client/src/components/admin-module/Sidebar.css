@@ -1,0 +1,55 @@
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 260px;
+  background-color: #282828;
+  border-right: 4px solid #007bff; /* Dark blue border */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.08) 0px 7px 13px -3px, rgba(0, 0, 0, 0.06) 0px -3px 0px inset;
+}
+
+
+/* Sidebar links list */
+.sidebar-menu {
+  list-style-type: none;
+  margin-top: 100px; /* Adjust this margin as needed */
+  padding: 10px;
+}
+
+/* Individual sidebar link items */
+.sidebar-menu li {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* Styling for the links */
+.sidebar-menu li a {
+  text-decoration: none;
+  color: #ffffff; /* Dark gray text */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects for background-color and text color */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Hover effect for links */
+.sidebar-menu li a:hover {
+  background-color: #007bff1a; /* Light blue background on hover */
+  color: #007bff; /* Dark blue text on hover */
+}
+
+/* Icon styles */
+.sidebar-menu li a svg {
+  margin-right: 10px;
+}
+
+/* Active link style */
+.sidebar-menu li.active a {
+  background-color: #007bff; /* Dark blue background for active link */
+  color: #fff; /* White text for active link */
+  font-weight: bold;
+}

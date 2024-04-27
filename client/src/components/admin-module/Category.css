@@ -1,0 +1,172 @@
+.users-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.search-input-container {
+  display: flex;
+  align-items: baseline;
+  width: 100%; /* Ensure the container spans the entire width */
+}
+
+.search-input {
+  flex: 1; /* Allow the input to expand to fill the available space */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px; /* Adjust padding as needed */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  width: 50px;
+}
+
+
+
+
+.add-button {
+  background-color: #28a745; /* Green color */
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff; /* White text */
+  padding: 8px 12px;
+  margin-left: 10px; /* Adjust margin as needed */
+  font-size: 16px;
+  font-weight: bold;
+  visibility: visible;
+}
+
+.add-button:hover {
+  background-color: #218837; /* Darker green color on hover */
+  box-shadow: #2188374d 0px 0px 0px 3px;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.users-table th,
+.users-table td {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Display an ellipsis (...) to represent clipped text */
+}
+.users-table tbody tr:hover {
+  background-color: #f0f0f0; /* Change background color on row hover */
+}
+
+.users-table thead {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.users-table tbody {
+  display: block;
+  max-height: 400px; /* Set maximum height for the table body */
+  overflow: hidden; /* Hide scrollbar by default */
+}
+.users-table tbody:hover {
+  overflow-y: auto; /* Show scrollbar on hover */
+}
+
+.users-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.users-table tbody td {
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Display an ellipsis (...) to represent clipped text */
+}
+img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  border: none;
+  background-color: transparent;
+  color: #007bff;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  font-weight: bold;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.action-buttons button {
+  margin-right: 5px; /* Adjust margin between buttons as needed */
+}
+
+/* Form styles */
+.custom-form {
+  margin-bottom: 20px;
+}
+
+.custom-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.custom-form input[type="text"],
+.custom-form textarea,
+.custom-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.custom-form input[type="text"]:focus,
+.custom-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.custom-form textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 100px; /* Set a minimum height */
+}
+
+.custom-form button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.custom-form button:hover {
+  background-color: #218838;
+  box-shadow: #2188374d 0px 0px 0px 3px;
+}
+
+

@@ -1,0 +1,97 @@
+/* Exams.css */
+
+.create-exam-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px; /* Add some margin to separate it from the cards */
+  margin-right: 20px;
+}
+
+.create-exam-button {
+  background-color: #28a745; /* Green color */
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff; /* White text */
+  padding: 8px 12px;
+  margin-left: 10px; /* Adjust margin as needed */
+  font-size: 16px;
+  font-weight: bold;
+  visibility: visible;
+}
+
+.create-exam-button:hover {
+  background-color: #218837; /* Darker green color on hover */
+  box-shadow: #2188374d 0px 0px 0px 3px;
+}
+
+.exams-container1 {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column size as needed */
+  gap: 20px; /* Adjust the gap between cards */
+}
+
+.exam-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #eaeaea;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.exam-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.exam-card img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.exam-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.exam-details h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.exam-details p {
+  margin: 5px;
+}
+
+.exam-category-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.questions-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.questions-list li {
+  margin-bottom: 5px;
+}
+
+.show-questions-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.show-questions-button:hover {
+  background-color: #0056b3;
+}
+

@@ -1,0 +1,201 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e9ecef;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #383838;
+  cursor: none;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.logout-btn {
+  background-color: transparent;
+  border: none;
+  color: #ff0000;
+  cursor: pointer;
+}
+
+
+/* modal-custom styles */
+.modal-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Ensure the modal-custom appears above other content */
+  opacity: 0;
+  pointer-events: none; /* Make modal-custom not clickable initially */
+  transition: opacity 0.3s ease;
+}
+
+.modal-custom.active {
+  opacity: 1;
+  pointer-events: auto; /* Make modal-custom clickable when active */
+}
+
+.modal-custom-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal-custom.active .modal-custom-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #333;
+}
+
+.modal-custom-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-custom-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-custom-body {
+  line-height: 1.6;
+  color: #000000 !important;
+}
+
+.modal-custom-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-custom-btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e80000;
+  color: #fff;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.modal-custom-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* modal-custom styles */
+
+.modal-custom-body {
+  text-align: center; /* Center-align the content */
+}
+
+.modal-custom-avatar {
+  max-width: 100px; /* Ensure the image doesn't exceed the modal-custom width */
+  max-height: 100px; /* Limit the image height to 80% of the viewport height */
+  margin-bottom: 20px; /* Add some spacing below the image */
+}
+
+/* deletion confirmation modal */
+.modal-buttons {
+  text-align: center;
+}
+
+.yes {
+  margin: 0 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #ff0000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+.cancel {
+  margin: 0 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.yes:hover {
+  background-color: #b30000;
+  box-shadow: #b3000052 0px 0px 0px 3px;
+}
+.cancel:hover {
+  background-color: #0056b3;
+  box-shadow: #0057b34f 0px 0px 0px 3px;
+}

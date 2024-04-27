@@ -1,0 +1,23 @@
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ExamList from './components/ExamList';
+import ExamForm from './components/ExamForm';
+import QuestionList from './components/QuestionList';
+import QuestionForm from './components/QuestionForm';
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/exams" exact component={ExamList} />
+          <Route path="/exams/new" component={ExamForm} />
+          <Route path="/exams/:id/edit" component={ExamForm} />
+          <Route path="/questions" exact component={QuestionList} />
+          <Route path="/questions/new" component={QuestionForm} />
+          <Route path="/questions/:id/edit" component={QuestionForm} />
+        </Switch>
+      </div>
+    </Router>
+  );
+}

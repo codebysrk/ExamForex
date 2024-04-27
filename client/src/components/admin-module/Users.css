@@ -1,0 +1,168 @@
+.users-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 10px;
+}
+
+.search-input {
+  width: 20%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 78%;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.users-table th,
+.users-table td {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Display an ellipsis (...) to represent clipped text */
+}
+.users-table tbody tr:hover {
+  background-color: #f0f0f0; /* Change background color on row hover */
+}
+
+.users-table thead {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  background-color: #282828;
+  color: #f0f0f0;
+  height: 40px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.users-table tbody {
+  display: block;
+  max-height: 400px; /* Set maximum height for the table body */
+  overflow: hidden; /* Hide scrollbar by default */
+}
+
+.users-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.users-table tbody td {
+  text-overflow: ellipsis; /* Display an ellipsis (...) to represent clipped text */
+}
+.tbl-img {
+  /* border: 1px solid red; */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  border: none;
+  background-color: transparent;
+  color: #007bff;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  font-weight: bold;
+}
+
+/* table image hover code */
+.profile-container {
+  position: relative;
+  cursor: zoom-in;
+  transition: transform 0.3s ease; /* Add transition for transform property */
+}
+.profile-container:hover {
+  transform: scale(1.05); /* Scale up the profile image on hover */
+}
+
+.modal {
+  position: fixed;
+  top: 55%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999; /* Ensure the modal appears above everything */
+}
+
+.modal img {
+  width: 250px; /* Adjust the width of the modal image */
+  height: auto;
+}
+
+
+
+/* delete and edit buttons styles here */
+.edit-button {
+  background-color: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 4px 8px;
+  font-size: larger;
+}
+.delete-button {
+  background-color: transparent;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 4px 8px;
+  font-size: larger;
+}
+
+.edit-button:hover {
+  background-color: #0015ff;
+  color: #fff;
+  box-shadow: rgba(0, 21, 255, 0.342) 0px 0px 0px 3px;
+}
+.delete-button:hover {
+  background-color: #ff0000;
+  color: #fff;
+  box-shadow: #8821214d 0px 0px 0px 3px;
+}
+
+
+/* Add these styles to your CSS file */
+.rating-stars {
+  display: inline-block;
+}
+
+.star {
+  font-size: 1.5em; /* Adjust the size of the stars */
+  color: #ccc; /* Color of the hollow stars */
+}
+
+.filled {
+  color: #ffcc00; /* Color of the filled stars */
+}

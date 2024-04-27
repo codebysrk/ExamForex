@@ -1,0 +1,24 @@
+.main-content {
+  width: calc(100% - 260px); /* Adjust for sidebar width */
+  margin-top: 100px; /* Adjust according to header height */
+  margin-left: 260px; /* Adjust according to sidebar width */
+}
+
+/* Media Query for Tablets and Smaller Screens */
+@media only screen and (max-width: 1024px) {
+  .main-content {
+      width: calc(100% - 200px); /* Adjust for smaller sidebar width */
+      margin-left: 180px; /* Adjust according to smaller sidebar width */
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+  .main-content {
+      width: 100%; /* Occupy full width on smaller screens */
+      margin-left: 50px; /* No margin on smaller screens */
+      margin-top: 60px; /* Adjust margin-top for smaller header height */
+  }
+}
+
+

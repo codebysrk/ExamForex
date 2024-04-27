@@ -1,0 +1,89 @@
+.exams-containerr {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.exams-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.exams-form {
+  padding: 10px;;
+}
+
+.exams-form-item {
+  margin-bottom: 15px;
+}
+
+.exams-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.exams-input,
+.exams-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.exams-title-questions {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.exams-question {
+  margin-bottom: 30px;
+}
+
+.exams-option {
+  margin-top: 10px;
+}
+
+.exams-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.exams-add-button {
+  background-color: #4CAF50;
+  color: white;
+  margin-right: 10px;
+}
+
+.exams-submit-button {
+  background-color: #008CBA;
+  color: white;
+}
+
+.exams-button:hover {
+  opacity: 0.8;
+}
+
+/* Optional: You can add more styling as needed */
+
+
+/* Exams.css */
+
+/* Add exam logo styling */
+.exams-form-item input[type="file"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+/* Optional: You can add more styling as needed */
